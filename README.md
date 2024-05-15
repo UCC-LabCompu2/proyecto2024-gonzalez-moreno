@@ -1,10 +1,10 @@
 # CALCULATOR APP
-## Autores
+## Alumnas
 * Gonzalez Alonso Agustina
 * Moreno Cuevas Martina 
 ## Descripción
 *Proyecto 2024*: Página web de calculos matematicos simples
-| Email | Autores |
+| Email | Alumna |
 |-------|---------|
 |2313442@ucc.edu.ar|Agustina|
 |2316783@ucc.edu.ar|Martina|
