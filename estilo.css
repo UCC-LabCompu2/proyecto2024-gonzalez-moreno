@@ -1,16 +1,19 @@
 .Paginaweb {
-        font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
+
 #tituloPrincipal {
     font-size: 30px;
     text-align: center;
     color: #FF3131;
 }
+
 img.centrado {
     margin: auto;
     display: block;
     width: 350px;
 }
+
 a:link, a:visited {
     color: white;
     text-decoration: none;
@@ -34,6 +37,7 @@ a:link, a:visited {
 .PaginaWeb2 {
     font-family: "Montserrat", sans-serif;
 }
+
 .titulo2 {
     font-weight: inherit;
     font-size: 30px;
@@ -41,17 +45,20 @@ a:link, a:visited {
     color: black;
     margin-bottom: 50px;
 }
+
 .calculator{
     display: flex;
     flex-direction: column;
     height: 200vh;
 }
+
 img.icono {
     display: flex;
     float: left;
     margin-top: 1px;
     width: 140px;
 }
+
 img.menu{
     display: flex;
     float: right;
@@ -97,6 +104,7 @@ img.menu{
     margin-right: auto;
     margin-left: auto;
 }
+
 #numero2{
     padding: 10px;
     font-size: 18px;
@@ -106,6 +114,7 @@ img.menu{
     margin-right: auto;
     margin-left: auto;
 }
+
 #numero3{
     padding: 10px;
     font-size: 18px;
@@ -115,16 +124,32 @@ img.menu{
     margin-right: auto;
     margin-left: auto;
 }
-
+.botonAtras{
+    border: none;
+    border-radius: 20px;
+    background-color: #FF3131;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    width: 400px;
+    cursor: pointer;
+    display: block;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
 .Suma {
     font-family: "Montserrat", sans-serif;
 }
+
 .Resta{
     font-family: "Montserrat", sans-serif;
 }
+
 .Multiplicacion{
     font-family: "Montserrat", sans-serif;
 }
+
 .Division {
     font-family: "Montserrat", sans-serif;
 }
@@ -133,12 +158,45 @@ img.menu{
     font-weight: normal;
     font-size: medium;
     text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
+
 .tituloNumero {
     font-weight: normal;
     font-size: 13px;
     text-align: center;
+    margin-top: 2px;
 }
 
+#botonMenu{
+    border: none;
+    background: white;
+    cursor: pointer;
+}
+
+.menu {
+    float: right;
+    display: inline-block;
+    position: relative;
+}
+
+.menuContenido {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    box-shadow: none;
+}
+
+.menu:hover .menuContenido {
+    display: block;
+}
+
+.menuContenido a {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+}
 
 
