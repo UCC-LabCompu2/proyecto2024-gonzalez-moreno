@@ -46,7 +46,7 @@ a:link, a:visited {
     margin-bottom: 50px;
 }
 
-.calculator{
+.calculator {
     display: flex;
     flex-direction: column;
     height: 200vh;
@@ -59,7 +59,7 @@ img.icono {
     width: 140px;
 }
 
-img.menu{
+img.menu {
     display: flex;
     float: right;
     margin-top: 1px;
@@ -105,7 +105,7 @@ img.menu{
     margin-left: auto;
 }
 
-#numero2{
+#numero2 {
     padding: 10px;
     font-size: 18px;
     width: 400px;
@@ -115,7 +115,7 @@ img.menu{
     margin-left: auto;
 }
 
-#numero3{
+#numero3 {
     padding: 10px;
     font-size: 18px;
     width: 400px;
@@ -124,7 +124,8 @@ img.menu{
     margin-right: auto;
     margin-left: auto;
 }
-.botonAtras{
+
+.botonAtras {
     border: none;
     border-radius: 20px;
     background-color: #FF3131;
@@ -138,15 +139,16 @@ img.menu{
     margin-right: auto;
     margin-left: auto;
 }
+
 .Suma {
     font-family: "Montserrat", sans-serif;
 }
 
-.Resta{
+.Resta {
     font-family: "Montserrat", sans-serif;
 }
 
-.Multiplicacion{
+.Multiplicacion {
     font-family: "Montserrat", sans-serif;
 }
 
@@ -169,7 +171,7 @@ img.menu{
     margin-top: 2px;
 }
 
-#botonMenu{
+#botonMenu {
     border: none;
     background: white;
     cursor: pointer;
@@ -198,12 +200,16 @@ img.menu{
     padding: 5px;
     text-decoration: none;
 }
-.ayuda{
+
+.ayuda {
     font-family: "Montserrat", sans-serif;
     font-size: medium;
 }
+
 .parrafo {
     text-align: center;
 }
+
+
 
 
