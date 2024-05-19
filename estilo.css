@@ -198,5 +198,12 @@ img.menu{
     padding: 5px;
     text-decoration: none;
 }
+.ayuda{
+    font-family: "Montserrat", sans-serif;
+    font-size: medium;
+}
+.parrafo {
+    text-align: center;
+}
 
 
