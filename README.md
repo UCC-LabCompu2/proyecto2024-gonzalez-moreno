@@ -14,5 +14,5 @@
 * CSS3
 
 **Link del proyecto:** 
-[Calculator app](https://ucc-labcompu2.github.io/proyecto2024-gonzalez-moreno/inicio.html)
+[Calculator app](https://ucc-labcompu2.github.io/proyecto2024-gonzalez-moreno/index.html)
 
