@@ -1,7 +1,13 @@
-# CALCULATOR APP 
+# CALCULATOR APP
+
+- [Alumnas](#alumnas)
+- [Descripción](#descripción)
+  - [Tecnologías usadas](#tecnologías-usadas)
+  
 ## Alumnas
 * Gonzalez Alonso Agustina ♥️
 * Moreno Cuevas Martina ♥️
+
 ## Descripción
 *Proyecto 2024*: Página web de calculos matematicos simples
 | Email | Alumna |
