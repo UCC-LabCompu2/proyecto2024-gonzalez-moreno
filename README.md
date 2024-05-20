@@ -1,4 +1,4 @@
-# CALCULATOR APP
+# CALCULATOR APP 
 ## Alumnas
 * Gonzalez Alonso Agustina
 * Moreno Cuevas Martina 
@@ -13,4 +13,4 @@
 * HTML5
 * CSS3
 
-Link del proyecto: 
+**Link del proyecto:** 
