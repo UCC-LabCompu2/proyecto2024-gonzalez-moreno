@@ -11,7 +11,7 @@
 
 ## Descripción
 
-*Proyecto 2024*: Página web de calculos matematicos simples
+*Proyecto 2024*: Página web de cálculos matemáticos simples
 | Email | Alumna |
 |-------|---------|
 |2313442@ucc.edu.ar|Agustina|
