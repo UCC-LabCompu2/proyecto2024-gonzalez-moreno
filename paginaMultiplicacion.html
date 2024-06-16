@@ -11,6 +11,7 @@
     <meta content="Gonzalez Alonso Agustina - Moreno Cuevas Martina" name="author">
     <meta content="Calculadora web con calculos simples como suma, resta, multiplicacion y division" name="description">
     <meta content="matematica, calculadora, numeros" name="keywords">
+    <script type="text/javascript" src="funciones.js"></script>
     <title>MULTIPLICACION</title>
 </head>
 <body class="Multiplicacion">
@@ -31,18 +32,20 @@
     </p>
     <p class="tituloNumeros">
         <label for="numero1"> Ingrese un número: </label>
-        <input type="text" name="numero1" id="numero1" placeholder="Ej: 2" size="60" maxlength="40">
+        <input type="text" name="numero1" id="numero1" placeholder="Ej: 2" size="60" maxlength="40"
+               onchange="multiplicacion()">
     </p>
     <p class="tituloNumeros">
         <label for="numero2"> Ingrese un número: </label>
-        <input type="text" name="numeros" id="numero2" placeholder="Ej: 3" size="60" maxlength="40">
+        <input type="text" name="numeros" id="numero2" placeholder="Ej: 3" size="60" maxlength="40"
+               onchange="multiplicacion()">
     </p>
     <p>
-        <button class="botonInicio"> Resolver</button>
+        <button class="botonInicio" onclick="multiplicacion()"> Resolver</button>
     </p>
     <p class="tituloNumeros">
         <label for="numero3"> Respuesta </label>
-        <input type="text" name="numeros" id="numero3" size="60" maxlength="40">
+        <span id="numero3" name="sum_total"></span>
     </p>
     <h3 class="tituloNumero"> *Debe ingresar un número antes de presionar el botón </h3>
     <p class="botonAtras">

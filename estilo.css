@@ -1,4 +1,4 @@
-.Paginaweb {
+* {
     font-family: "Montserrat", sans-serif;
 }
 
@@ -32,10 +32,6 @@ a:link, a:visited {
     margin-right: auto;
     margin-left: auto;
     width: 150px;
-}
-
-.PaginaWeb2 {
-    font-family: "Montserrat", sans-serif;
 }
 
 .titulo2 {
@@ -140,22 +136,6 @@ img.menu {
     margin-left: auto;
 }
 
-.Suma {
-    font-family: "Montserrat", sans-serif;
-}
-
-.Resta {
-    font-family: "Montserrat", sans-serif;
-}
-
-.Multiplicacion {
-    font-family: "Montserrat", sans-serif;
-}
-
-.Division {
-    font-family: "Montserrat", sans-serif;
-}
-
 .tituloNumeros {
     font-weight: normal;
     font-size: medium;
@@ -202,14 +182,18 @@ img.menu {
 }
 
 .ayuda {
-    font-family: "Montserrat", sans-serif;
     font-size: medium;
 }
 
 .parrafo {
     text-align: center;
 }
+#miCanvas{
+    border:1px;
+    solid-color: #FF3131;
 
+
+}
 
 
 

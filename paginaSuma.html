@@ -11,6 +11,7 @@
     <meta content="Gonzalez Alonso Agustina - Moreno Cuevas Martina" name="author">
     <meta content="Calculadora web con calculos simples como suma, resta, multiplicacion y division" name="description">
     <meta content="matematica, calculadora, numeros" name="keywords">
+    <script type="text/javascript" src="funciones.js"></script>
     <title>SUMA</title>
 </head>
 <body class="Suma">
@@ -30,23 +31,34 @@
     </p>
     <p class="tituloNumeros">
         <label for="numero1"> Ingrese un número: </label>
-        <input type="text" name="numero1" id="numero1" placeholder="Ej: 2" size="60" maxlength="40">
+        <input type="text" name="numero1" id="numero1" placeholder="Ej: 2" size="60" maxlength="40"
+               onchange="suma()">
     </p>
     <p class="tituloNumeros">
         <label for="numero2"> Ingrese un número: </label>
-        <input type="text" name="numeros" id="numero2" placeholder="Ej: 3" size="60" maxlength="40">
+        <input type="text" name="numeros" id="numero2" placeholder="Ej: 3" size="60" maxlength="40"
+               onchange="suma()">
     </p>
     <p>
-        <button class="botonInicio"> Resolver</button>
+        <button class="botonInicio" onclick="suma()"> Resolver</button>
     </p>
     <p class="tituloNumeros">
         <label for="numero3"> Respuesta </label>
-        <input type="text" name="numeros" id="numero3" size="60" maxlength="40">
+        <span id="numero3" name="sum_total"></span>
+
     </p>
     <h3 class="tituloNumero"> *Debe ingresar un número antes de presionar el botón </h3>
     <p class="botonAtras">
         <a href="inicio.html"> Volver atrás </a>
     </p>
+
+    <label for="tamañoCuadrado"> Ingrese la medida del cuadrado:</label>
+    <input type="number" id="tamañoCuadrado" value="50" min="10" max="200">
+    <button onclick="dibujarCuadrado()">Dibujar Cuadrado</button>
+
+    <canvas id="miCanvas" width="220" height="220" >
+        Tu navegador no soporta el elemento HTML canvas.
+    </canvas>
 </div>
 </body>
 </html>
