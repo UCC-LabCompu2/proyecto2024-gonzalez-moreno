@@ -168,7 +168,13 @@ img.menu {
 .parrafo {
     text-align: center;
 }
-
+.grafico{
+    color: black;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
 
 
 

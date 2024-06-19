@@ -6,8 +6,12 @@ let suma = () => {
     const s1 = Number(document.getElementById("numero1").value);
     const s2 = Number(document.getElementById("numero2").value);
 
-    if (Number.isNaN(Number(s1)) || Number.isNaN(Number(s2))) {
-        alert('Debe ingresar un numero valido')
+    if (Number.isNaN(s1) || Number.isNaN(s2)) {
+        alert('Debe ingresar un número válido');
+        document.getElementById('numero1').value = '';
+        document.getElementById('numero2').value = '';
+    } else if (s1 > 10 || s2 > 10 || s1 < 0 || s2 < 0) {
+        alert('Los números deben ser mayores o iguales a 0 y menores o iguales a 10');
         document.getElementById('numero1').value = '';
         document.getElementById('numero2').value = '';
     } else {
@@ -24,7 +28,11 @@ let resta = () => {
     const r2 = Number(document.getElementById("numero2").value);
 
     if (Number.isNaN(Number(r1)) || Number.isNaN(Number(r2))) {
-        alert('Debe ingresar un numero valido')
+        alert('Debe ingresar un número valido')
+        document.getElementById('numero1').value = '';
+        document.getElementById('numero2').value = '';
+    } else if (r1 > 10 || r2 > 10 || r1 < 0 || r2 < 0) {
+        alert('Los números deben ser mayores o iguales a 0 y menores o iguales a 10');
         document.getElementById('numero1').value = '';
         document.getElementById('numero2').value = '';
     } else {
@@ -41,7 +49,11 @@ let division = () => {
     const d2 = Number(document.getElementById("numero2").value);
 
     if (Number.isNaN(Number(d1)) || Number.isNaN(Number(d2))) {
-        alert('Debe ingresar un numero valido')
+        alert('Debe ingresar un número valido')
+        document.getElementById('numero1').value = '';
+        document.getElementById('numero2').value = '';
+    } else if (d1 > 10 || d2 > 10 || d1 < 0 || d2 < 0) {
+        alert('Los números deben ser mayores o iguales a 0 y menores o iguales a 10');
         document.getElementById('numero1').value = '';
         document.getElementById('numero2').value = '';
     } else {
@@ -58,7 +70,11 @@ let multiplicacion = () => {
     const m2 = Number(document.getElementById("numero2").value);
 
     if (Number.isNaN(Number(m1)) || Number.isNaN(Number(m2)) || Number > 5) {
-        alert('Debe ingresar un numero valido')
+        alert('Debe ingresar un número valido')
+        document.getElementById('numero1').value = '';
+        document.getElementById('numero2').value = '';
+    } else if (m1 > 10 || m2 > 10 || m1 < 0 || m2 < 0) {
+        alert('Los números deben ser mayores o iguales a 0 y menores o iguales a 10');
         document.getElementById('numero1').value = '';
         document.getElementById('numero2').value = '';
     } else {
@@ -71,10 +87,10 @@ let multiplicacion = () => {
  * @method dibujarRecta
  */
 
-function dibujarRectaNumerica() {
+let dibujarRectaNumerica = () => {
     const canvas = document.getElementById("myCanvas");
     const ctx = canvas.getContext("2d");
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
     ctx.beginPath();
     ctx.moveTo(10, 50);
     ctx.lineTo(990, 50);
@@ -97,6 +113,7 @@ let graficarLinea = () => {
     const ctx = canvas.getContext("2d");
     const puntoInicio = document.getElementById('numero1').value;
     const puntoFinal = document.getElementById('numero2').value;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     dibujarRectaNumerica();
 
@@ -109,8 +126,6 @@ let graficarLinea = () => {
     ctx.closePath();
 }
 
-
-dibujarRectaNumerica();
 
 
 
