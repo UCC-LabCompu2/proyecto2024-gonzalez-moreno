@@ -93,10 +93,10 @@ let dibujarRectaNumerica = () => {
 
     ctx.beginPath();
     ctx.moveTo(10, 50);
-    ctx.lineTo(990, 50);
+    ctx.lineTo(490, 50);
     ctx.stroke();
 
-    for (let i = 0; i <= 20; i++) {
+    for (let i = 0; i <= 10; i++) {
         ctx.fillText(i, 10 + i * 48, 70);
         ctx.moveTo(10 + i * 48, 45);
         ctx.lineTo(10 + i * 48, 55);
