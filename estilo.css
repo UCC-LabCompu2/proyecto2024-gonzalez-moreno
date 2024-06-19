@@ -91,27 +91,7 @@ img.menu {
     margin-left: auto;
 }
 
-#numero1 {
-    padding: 10px;
-    font-size: 18px;
-    width: 400px;
-    display: block;
-    border-radius: 10px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-#numero2 {
-    padding: 10px;
-    font-size: 18px;
-    width: 400px;
-    display: block;
-    border-radius: 10px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-#numero3 {
+.numeros {
     padding: 10px;
     font-size: 18px;
     width: 400px;
@@ -188,12 +168,7 @@ img.menu {
 .parrafo {
     text-align: center;
 }
-#miCanvas{
-    border:1px;
-    solid-color: #FF3131;
 
-
-}
 
 
 

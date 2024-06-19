@@ -1,9 +1,6 @@
 /**
  * Permite sumar 2 numeros ingresados por el usuario
- * @param suma
- * @param {number} s1 - numero real
- * @param {number} s2 - numero real
- * @return suma de dos numeros reales
+ * @method suma
  */
 let suma = () => {
     const s1 = Number(document.getElementById("numero1").value);
@@ -11,6 +8,8 @@ let suma = () => {
 
     if (Number.isNaN(Number(s1)) || Number.isNaN(Number(s2))) {
         alert('Debe ingresar un numero valido')
+        document.getElementById('numero1').value = '';
+        document.getElementById('numero2').value = '';
     } else {
         document.getElementById("numero3").innerHTML = s1 + s2;
     }
@@ -18,10 +17,7 @@ let suma = () => {
 
 /**
  * Permite restar 2 numeros ingresados por el usuario
- * @param resta
- * @param {number} r1 - numero real
- * @param {number} r2 - numero real
- * @return resta de dos numeros reales
+ * @method resta
  */
 let resta = () => {
     const r1 = Number(document.getElementById("numero1").value);
@@ -29,6 +25,8 @@ let resta = () => {
 
     if (Number.isNaN(Number(r1)) || Number.isNaN(Number(r2))) {
         alert('Debe ingresar un numero valido')
+        document.getElementById('numero1').value = '';
+        document.getElementById('numero2').value = '';
     } else {
         document.getElementById("numero3").innerHTML = r1 - r2;
     }
@@ -36,10 +34,7 @@ let resta = () => {
 
 /**
  * Permite dividir 2 numeros ingresados por el usuario
- * @param divide
- * @param {number} d1 - numero real
- * @param {number} d2 - numero real
- * @return division de dos numeros reales
+ * @method division
  */
 let division = () => {
     const d1 = Number(document.getElementById("numero1").value);
@@ -47,6 +42,8 @@ let division = () => {
 
     if (Number.isNaN(Number(d1)) || Number.isNaN(Number(d2))) {
         alert('Debe ingresar un numero valido')
+        document.getElementById('numero1').value = '';
+        document.getElementById('numero2').value = '';
     } else {
         document.getElementById("numero3").innerHTML = d1 / d2;
     }
@@ -54,28 +51,66 @@ let division = () => {
 
 /**
  * Permite multiplicar 2 numeros ingresados por el usuario
- * @param multiplicacion
- * @param {number} m1 - numero real
- * @param {number} m1 - numero real
- * @return multiplicacion de dos numeros reales
+ * @method multiplicacion
  */
 let multiplicacion = () => {
     const m1 = Number(document.getElementById("numero1").value);
     const m2 = Number(document.getElementById("numero2").value);
 
-    if (Number.isNaN(Number(m1)) || Number.isNaN(Number(m2))) {
+    if (Number.isNaN(Number(m1)) || Number.isNaN(Number(m2)) || Number > 5) {
         alert('Debe ingresar un numero valido')
+        document.getElementById('numero1').value = '';
+        document.getElementById('numero2').value = '';
     } else {
         document.getElementById("numero3").innerHTML = m1 * m2;
     }
 }
 
-function dibujarCuadrado() {
-    var canvas = document.getElementById('miCanvas');
-    var ctx = canvas.getContext('2d');
-    var tamaño = document.getElementById('tamañoCuadrado').value;
+/**
+ * Permite dibujar una recta numerica
+ * @method dibujarRecta
+ */
 
+function dibujarRectaNumerica() {
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillRect(10, 10, tamaño, tamaño);
+    ctx.beginPath();
+    ctx.moveTo(10, 50);
+    ctx.lineTo(990, 50);
+    ctx.stroke();
+
+    for (let i = 0; i <= 20; i++) {
+        ctx.fillText(i, 10 + i * 48, 70);
+        ctx.moveTo(10 + i * 48, 45);
+        ctx.lineTo(10 + i * 48, 55);
+        ctx.stroke();
+    }
 }
+
+/**
+ * Permite graficar una linea en la recta numerica
+ * @method graficarLinea
+ */
+let graficarLinea = () => {
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+    const puntoInicio = document.getElementById('numero1').value;
+    const puntoFinal = document.getElementById('numero2').value;
+
+    dibujarRectaNumerica();
+
+    ctx.strokeStyle = 'red';
+    ctx.beginPath();
+    ctx.moveTo(10 + puntoInicio * 48, 45);
+    ctx.lineTo(10 + puntoFinal * 48, 55);
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.closePath();
+}
+
+
+dibujarRectaNumerica();
+
+
 
