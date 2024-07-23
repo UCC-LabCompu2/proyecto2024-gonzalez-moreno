@@ -108,7 +108,7 @@ let dibujarRectaNumerica = () => {
  * Permite graficar una linea en la recta numerica
  * @method graficarLinea
  */
-let lineaRojaDibujada = false; // Variable para controlar si la línea roja ya se dibujó
+let lineaRoja = false; // Variable para controlar si la línea roja ya se dibujó
 
 let graficarLinea = () => {
     const canvas = document.getElementById("myCanvas");
@@ -116,13 +116,12 @@ let graficarLinea = () => {
     const puntoInicio = parseFloat(document.getElementById('numero1').value);
     const puntoFinal = parseFloat(document.getElementById('numero2').value);
 
-    // Ordenar los números (puntoInicio debe ser el más pequeño)
-    const numMin = Math.min(puntoInicio, puntoFinal);
-    const numMax = Math.max(puntoInicio, puntoFinal);
-    const tot = numMin + numMax;
+    // Ordenar los números
+    const inicio= 0;
+    const tot = puntoInicio + puntoFinal;
 
     // dibuja la recta numerica en negro solo si la linea roja no se dibujo todavia
-    if (!lineaRojaDibujada) {
+    if (!lineaRoja) {
         dibujarRectaNumerica();
     }
 
@@ -130,22 +129,22 @@ let graficarLinea = () => {
     const dibujarLineaRoja = (x) => {
         ctx.strokeStyle = 'red';
         ctx.beginPath();
-        ctx.moveTo(10 + numMin * 48, 50);
+        ctx.moveTo(10 + inicio * 48, 50);
         ctx.lineTo(x, 50);
         ctx.lineWidth = 2;
         ctx.stroke();
         ctx.closePath();
     };
 
-    const animarLinea = (x) => {
+    const animacionLinea = (x) => {
         if (x <= 10 + tot * 48) {
             dibujarLineaRoja(x);
-            x += 1; // Incrementa la posición
-            setTimeout(() => animarLinea(x), 10);
+            x += 1;
+            setTimeout(() => animacionLinea(x), 10);
         } else {
-            lineaRojaDibujada = true;
+            lineaRoja = true;
         }
     };
 
-    animarLinea(10 + numMin * 48);
+    animacionLinea(10 + inicio * 48);
 }
