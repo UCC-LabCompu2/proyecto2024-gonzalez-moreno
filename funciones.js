@@ -10,8 +10,8 @@ let suma = () => {
         alert('Debe ingresar un número válido');
         document.getElementById('numero1').value = '';
         document.getElementById('numero2').value = '';
-    } else if (s1 > 10 || s2 > 10 || s1 < 0 || s2 < 0) {
-        alert('Los números deben ser mayores o iguales a 0 y menores o iguales a 10');
+    } else if (s1 > 5 || s2 > 5 || s1 < 0 || s2 < 0) {
+        alert('Los números deben ser mayores o iguales a 0 y menores o iguales a 5');
         document.getElementById('numero1').value = '';
         document.getElementById('numero2').value = '';
     } else {
@@ -31,8 +31,8 @@ let resta = () => {
         alert('Debe ingresar un número valido')
         document.getElementById('numero1').value = '';
         document.getElementById('numero2').value = '';
-    } else if (r1 > 10 || r2 > 10 || r1 < 0 || r2 < 0) {
-        alert('Los números deben ser mayores o iguales a 0 y menores o iguales a 10');
+    } else if (r1 > 5 || r2 > 5 || r1 < 0 || r2 < 0) {
+        alert('Los números deben ser mayores o iguales a 0 y menores o iguales a 5');
         document.getElementById('numero1').value = '';
         document.getElementById('numero2').value = '';
     } else {
@@ -52,8 +52,8 @@ let division = () => {
         alert('Debe ingresar un número valido')
         document.getElementById('numero1').value = '';
         document.getElementById('numero2').value = '';
-    } else if (d1 > 10 || d2 > 10 || d1 < 0 || d2 < 0) {
-        alert('Los números deben ser mayores o iguales a 0 y menores o iguales a 10');
+    } else if (d1 > 5 || d2 > 5 || d1 < 0 || d2 < 0) {
+        alert('Los números deben ser mayores o iguales a 0 y menores o iguales a 5');
         document.getElementById('numero1').value = '';
         document.getElementById('numero2').value = '';
     } else {
@@ -73,8 +73,8 @@ let multiplicacion = () => {
         alert('Debe ingresar un número valido')
         document.getElementById('numero1').value = '';
         document.getElementById('numero2').value = '';
-    } else if (m1 > 10 || m2 > 10 || m1 < 0 || m2 < 0) {
-        alert('Los números deben ser mayores o iguales a 0 y menores o iguales a 10');
+    } else if (m1 > 5 || m2 > 5 || m1 < 0 || m2 < 0) {
+        alert('Los números deben ser mayores o iguales a 0 y menores o iguales a 5');
         document.getElementById('numero1').value = '';
         document.getElementById('numero2').value = '';
     } else {
@@ -108,24 +108,44 @@ let dibujarRectaNumerica = () => {
  * Permite graficar una linea en la recta numerica
  * @method graficarLinea
  */
+let lineaRojaDibujada = false; // Variable para controlar si la línea roja ya se dibujó
+
 let graficarLinea = () => {
     const canvas = document.getElementById("myCanvas");
     const ctx = canvas.getContext("2d");
-    const puntoInicio = document.getElementById('numero1').value;
-    const puntoFinal = document.getElementById('numero2').value;
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const puntoInicio = parseFloat(document.getElementById('numero1').value);
+    const puntoFinal = parseFloat(document.getElementById('numero2').value);
 
-    dibujarRectaNumerica();
+    // Ordenar los números (puntoInicio debe ser el más pequeño)
+    const numMin = Math.min(puntoInicio, puntoFinal);
+    const numMax = Math.max(puntoInicio, puntoFinal);
+    const tot = numMin + numMax;
 
-    ctx.strokeStyle = 'red';
-    ctx.beginPath();
-    ctx.moveTo(10 + puntoInicio * 48, 45);
-    ctx.lineTo(10 + puntoFinal * 48, 55);
-    ctx.lineWidth = 2;
-    ctx.stroke();
-    ctx.closePath();
+    // dibuja la recta numerica en negro solo si la linea roja no se dibujo todavia
+    if (!lineaRojaDibujada) {
+        dibujarRectaNumerica();
+    }
+
+    // Función para dibujar la línea roja
+    const dibujarLineaRoja = (x) => {
+        ctx.strokeStyle = 'red';
+        ctx.beginPath();
+        ctx.moveTo(10 + numMin * 48, 50);
+        ctx.lineTo(x, 50);
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.closePath();
+    };
+
+    const animarLinea = (x) => {
+        if (x <= 10 + tot * 48) {
+            dibujarLineaRoja(x);
+            x += 1; // Incrementa la posición
+            setTimeout(() => animarLinea(x), 10);
+        } else {
+            lineaRojaDibujada = true;
+        }
+    };
+
+    animarLinea(10 + numMin * 48);
 }
-
-
-
-
