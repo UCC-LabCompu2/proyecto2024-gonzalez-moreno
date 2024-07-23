@@ -52,8 +52,8 @@ let division = () => {
         alert('Debe ingresar un número valido')
         document.getElementById('numero1').value = '';
         document.getElementById('numero2').value = '';
-    } else if (d1 > 5 || d2 > 5 || d1 < 0 || d2 < 0) {
-        alert('Los números deben ser mayores o iguales a 0 y menores o iguales a 5');
+    } else if (d1 > 100 || d2 > 100 || d1 < 0 || d2 < 0) {
+        alert('Los números deben ser mayores o iguales a 0 y menores o iguales a 100');
         document.getElementById('numero1').value = '';
         document.getElementById('numero2').value = '';
     } else {
@@ -73,8 +73,8 @@ let multiplicacion = () => {
         alert('Debe ingresar un número valido')
         document.getElementById('numero1').value = '';
         document.getElementById('numero2').value = '';
-    } else if (m1 > 5 || m2 > 5 || m1 < 0 || m2 < 0) {
-        alert('Los números deben ser mayores o iguales a 0 y menores o iguales a 5');
+    } else if (m1 > 100 || m2 > 100 || m1 < 0 || m2 < 0) {
+        alert('Los números deben ser mayores o iguales a 0 y menores o iguales a 100');
         document.getElementById('numero1').value = '';
         document.getElementById('numero2').value = '';
     } else {
