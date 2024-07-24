@@ -108,7 +108,7 @@ let dibujarRectaNumerica = () => {
  * Permite graficar una linea en la recta numerica
  * @method graficarLinea
  */
-let lineaRoja = false; // Variable para controlar si la línea roja ya se dibujó
+let lineaRoja = false;
 
 let graficarLinea = () => {
     const canvas = document.getElementById("myCanvas");
@@ -116,16 +116,13 @@ let graficarLinea = () => {
     const puntoInicio = parseFloat(document.getElementById('numero1').value);
     const puntoFinal = parseFloat(document.getElementById('numero2').value);
 
-    // Ordenar los números
     const inicio= 0;
     const tot = puntoInicio + puntoFinal;
 
-    // dibuja la recta numerica en negro solo si la linea roja no se dibujo todavia
     if (!lineaRoja) {
         dibujarRectaNumerica();
     }
 
-    // Función para dibujar la línea roja
     const dibujarLineaRoja = (x) => {
         ctx.strokeStyle = 'red';
         ctx.beginPath();
