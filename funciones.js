@@ -145,6 +145,5 @@ let graficarLinea = () => {
             lineaRoja = true;
         }
     };
-
     animacionLinea(10 + inicio * 48);
 }
